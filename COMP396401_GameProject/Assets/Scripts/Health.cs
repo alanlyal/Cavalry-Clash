@@ -5,8 +5,9 @@ public class Health : MonoBehaviour
 
     [Header("Health")]
     [SerializeField] private int maxHealth = 150;
-    [SerializeField] private int health = 100;
+    [SerializeField] public int health = 100;
     private bool dead = false;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

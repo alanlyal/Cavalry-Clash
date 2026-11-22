@@ -1,3 +1,5 @@
+using NUnit.Framework.Internal;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,9 +19,18 @@ namespace Core.FSM
             InvadingState invadeState = new InvadingState(meshRenderer, agent, castle);
             stateMachine.SetState(invadeState);
         }
+        public int NodeIndex;
         public void Update()
         {
             stateMachine.Update();
+        }
+        private void OnEnable()
+        {
+            GameLoopManager.CurrentEnemies.Add(this);
+        }
+        private void OnDisable()
+        {
+            GameLoopManager.CurrentEnemies.Remove(this);
         }
     }
 }
