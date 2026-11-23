@@ -10,7 +10,7 @@ public class GameLoopManager : MonoBehaviour
     private DefenseBehavoir[] defenses;
     private void Start()
     {
-        defenses = FindObjectsByType<DefenseBehavoir>(FindObjectsSortMode.None);
+        defenses = FindObjectsByType<DefenseBehavoir>(FindObjectsInactive.Exclude);
    }
     private void Update()
     {

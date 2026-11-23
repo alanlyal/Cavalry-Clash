@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1441712352092217082}
   - component: {fileID: 8453018514767805177}
   - component: {fileID: 576189014549155536}
-  - component: {fileID: 1427766322188787286}
   - component: {fileID: 3968355542995206059}
   m_Layer: 0
   m_Name: Castle_Mesh
@@ -114,20 +113,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.1986942}
   m_Center: {x: 0, y: 0, z: 0.099346906}
---- !u!114 &1427766322188787286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5796799953718555961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21b16522b1f4d2544be8cee4deaf8d07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 150
-  health: 100
 --- !u!54 &3968355542995206059
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PawnDamage : MonoBehaviour
@@ -6,6 +5,13 @@ public class PawnDamage : MonoBehaviour
 
     [Header("Pawn Damage")]
     [SerializeField] private int damage = 10;
+
+    private LevelManager levelManager;
+
+    public void Start()
+    {
+        levelManager = FindAnyObjectByType<LevelManager>();
+    }
 
 
     //DAMAGE ================================================================
@@ -27,6 +33,15 @@ public class PawnDamage : MonoBehaviour
 
             targetPawn.TakeDamage(damage);
             Debug.Log("Damage Taken:" + damage);
+            return;
+        }
+
+        //Check if hitting castle
+        if (levelManager != null && levelManager.IsCastle(other))
+        {
+            levelManager.DamageCastle(damage);
+            Debug.Log ("Castle Damage Taken: " + damage);
+            Destroy(gameObject);
         }
     }
 

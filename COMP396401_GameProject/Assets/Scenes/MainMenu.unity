@@ -246,6 +246,17 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &86096291 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 347835467997520916, guid: f9bb6cfe69b74194a8bcad80aea9fd1a, type: 3}
+  m_PrefabInstance: {fileID: 698471265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71848d0863ad244eb1b4d312fab9684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIMenuManager
 --- !u!1 &185257613
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,8 +340,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1380432962}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+      - m_Target: {fileID: 86096291}
+        m_TargetAssemblyTypeName: UIMenuManager, Assembly-CSharp
         m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
@@ -547,75 +558,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1380432961
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 86592298702689042, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_Name
-      value: LevelManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1004.06177
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3180.6958
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 186596372283159950, guid: 367077e3a016a18489352fff00e66350, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 367077e3a016a18489352fff00e66350, type: 3}
---- !u!114 &1380432962 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7006701857777118401, guid: 367077e3a016a18489352fff00e66350, type: 3}
-  m_PrefabInstance: {fileID: 1380432961}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b1f6527bafa4d34883328787ac604fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
 --- !u!1 &1492323149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,5 +974,4 @@ SceneRoots:
   - {fileID: 56164336}
   - {fileID: 1130179122}
   - {fileID: 1161265725}
-  - {fileID: 1380432961}
   - {fileID: 698471265}
