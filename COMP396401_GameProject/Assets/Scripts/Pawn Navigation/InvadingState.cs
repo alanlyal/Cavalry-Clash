@@ -23,7 +23,6 @@ public class InvadingState : BaseState
 
         agent.SetDestination(castle.position);
         Debug.Log("Agent Destination: " + agent.destination);
-
     }
     public override void Update()
     {
