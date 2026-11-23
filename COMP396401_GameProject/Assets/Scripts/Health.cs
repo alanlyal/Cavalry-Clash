@@ -49,9 +49,21 @@ public class Health : MonoBehaviour
     }
 
     ///Dead =======================================
+
     private void Dead()
     {
         dead = true;
+
+        if (CompareTag("Pawn"))
+        {
+            PawnKillReward reward = GetComponent<PawnKillReward>();
+
+            if (reward != null)
+            {
+                reward.GiveReward();
+            }
+
+        }
 
         Destroy(gameObject);
     }

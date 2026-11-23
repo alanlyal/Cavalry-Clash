@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 7739449248253458878}
   - component: {fileID: 9152556555096332045}
   - component: {fileID: 7355260113169675567}
+  - component: {fileID: 7079123188366673745}
   m_Layer: 6
   m_Name: Pawn
   m_TagString: Enemy
@@ -235,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.FSM.InvadingPawnStateMachine
   castle: {fileID: 773187646531247698, guid: e56d97620c118484a939b89add7dbd28, type: 3}
+  NodeIndex: 0
 --- !u!54 &7355260113169675567
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -262,3 +264,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7079123188366673745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942732444176504592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7199cfcd88a606143b322e28aa85ad0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PawnKillReward
+  coinManager: {fileID: 186596372283159950, guid: 367077e3a016a18489352fff00e66350, type: 3}
+  coinReward: 0

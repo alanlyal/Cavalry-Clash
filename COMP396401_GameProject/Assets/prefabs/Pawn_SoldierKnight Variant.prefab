@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7079123188366673745, guid: 9f527fe2725da134fafec87965308b91, type: 3}
+      propertyPath: coinReward
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8942732444176504592, guid: 9f527fe2725da134fafec87965308b91, type: 3}
       propertyPath: m_Name
       value: Pawn_SoldierKnight Variant

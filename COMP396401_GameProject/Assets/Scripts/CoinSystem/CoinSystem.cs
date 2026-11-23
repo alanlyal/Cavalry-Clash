@@ -2,60 +2,116 @@ using UnityEngine;
 
 public class CoinSystem : MonoBehaviour
 {
-    [Header("Coins")]
-    private int coin = 1;
-    [SerializeField] private int coinAmount = 1;
-    [SerializeField] private int startingCoins = 7;
+    [Header("Player1 - Coin Balance")]
 
-    //text
+    [SerializeField] private int p1coinAmount = 0;
+    [SerializeField] private int p1startingCoins = 7;
     [SerializeField] private TMPro.TMP_Text p1CoinCountTxt;
+
+
+
+    [Header("Player2 - Coin Balance")]
+
+    [SerializeField] private int p2coinAmount = 0;
+    [SerializeField] private int p2startingCoins = 7;
     [SerializeField] private TMPro.TMP_Text p2CoinCountTxt;
 
-    //coin generation timer
-    [Header("P2 Coin Generation")]
-    [SerializeField] public float generationTimer = 5f;
-    [SerializeField] private float generationTimerRemaining = 5f;
+    //text
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
+
     void Start()
     {
-        
+        p1coinAmount = p1startingCoins;
+        p2coinAmount = p2startingCoins;
+
+        UpdateCoinCount();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    //ADD ==============================
+    public void P1AddCoins(int amount)
     {
-        
+        if (amount <= 0)
+        {
+            return;
+        }
+
+        p1coinAmount += amount;
+
+        Debug.Log($"Player1 earned {amount} of coins. Total: {p1coinAmount}");
+
+        UpdateCoinCount();
     }
 
-
-    //coin generation
-    public void coinGeneration(int amount)
+    public void P2AddCoins(int amount)
     {
-        coinAmount += amount;
+        if (amount <= 0)
+        {
+            return;
+        }
 
-        //add timer
+        p2coinAmount += amount;
 
-        //text update
-        P2CoinCount();
+        Debug.Log($"Player2 earned {amount} of coins. Total: {p2coinAmount}");
+
+        UpdateCoinCount();
     }
 
-    //coin take out value
-    //coin gain more coins
+
+    //SPEND ==============================
+    public void P1SpendCoins(int amount)
+    {
+        if (amount <= 0)
+        {
+            return;
+        }
+
+        if (p1coinAmount <= 0)
+        {
+            return;
+        }
+
+        p1coinAmount -= amount;
+
+        Debug.Log($"Player1 spent {amount} of coins. Total: {p1coinAmount}");
+        UpdateCoinCount();
+    }
+
+
+    public void P2SpendCoins(int amount)
+    {
+        if (amount <= 0)
+        {
+            return;
+        }
+
+        if (p2coinAmount <= 0)
+        {
+            return;
+        }
+
+        p2coinAmount -= amount;
+
+        Debug.Log($"Player2 spent {amount} of coins. Total: {p2coinAmount}");
+        UpdateCoinCount();
+    }
 
 
     //turn coins into text
 
-    public void P1CoinCount()
+    public void UpdateCoinCount()
     {
-        p1CoinCountTxt.text = "C: " + coinAmount;
+        p1CoinCountTxt.text = "C: " + p1coinAmount;
+        
+        
+
+        p2CoinCountTxt.text = "C: " + p2coinAmount;
     }
 
 
-    public void P2CoinCount()
-    {
-        p2CoinCountTxt.text = "C: " + coinAmount;
-    }
-}
+
+}//=========================================================================== End of bracket
 
 

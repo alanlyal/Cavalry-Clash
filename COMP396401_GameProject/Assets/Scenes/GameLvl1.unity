@@ -6789,6 +6789,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f527fe2725da134fafec87965308b91, type: 3}
+--- !u!1 &1533581907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533581909}
+  - component: {fileID: 1533581908}
+  m_Layer: 0
+  m_Name: Player2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1533581908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533581907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16eb2071cb70448a16631868c132b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinGenerator
+  coinManager: {fileID: 4311832420485937366}
+  generationTime: 5
+  coinAmountGenerated: 1
+  isPlayer2: 1
+--- !u!4 &1533581909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533581907}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3489, y: -11.8, z: 97.34382}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1561838343
 GameObject:
   m_ObjectHideFlags: 0
@@ -9440,6 +9488,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 186596372283159950, guid: 367077e3a016a18489352fff00e66350, type: 3}
+      propertyPath: p1CoinCountTxt
+      value: 
+      objectReference: {fileID: 2110606061}
+    - target: {fileID: 186596372283159950, guid: 367077e3a016a18489352fff00e66350, type: 3}
+      propertyPath: p2CoinCountTxt
+      value: 
+      objectReference: {fileID: 2005150823}
     - target: {fileID: 3064814434603673833, guid: 367077e3a016a18489352fff00e66350, type: 3}
       propertyPath: m_LocalPosition.x
       value: 168.92427
@@ -9485,6 +9541,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 367077e3a016a18489352fff00e66350, type: 3}
+--- !u!114 &4311832420485937366 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 186596372283159950, guid: 367077e3a016a18489352fff00e66350, type: 3}
+  m_PrefabInstance: {fileID: 4311832420485937365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c33b32ba4b600449a530b3422a1492e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinSystem
 --- !u!4 &5249895391937631966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4940403726286296400, guid: bf63ec1e1fbac484d83021ef7651798d, type: 3}
@@ -9675,3 +9742,4 @@ SceneRoots:
   - {fileID: 4311832420485937365}
   - {fileID: 467717708764940033}
   - {fileID: 1736470892}
+  - {fileID: 1533581909}
