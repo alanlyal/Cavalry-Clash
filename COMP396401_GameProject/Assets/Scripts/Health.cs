@@ -54,7 +54,7 @@ public class Health : MonoBehaviour
     {
         dead = true;
 
-        if (CompareTag("Pawn"))
+        if (CompareTag("Enemy"))
         {
             PawnKillReward reward = GetComponent<PawnKillReward>();
 

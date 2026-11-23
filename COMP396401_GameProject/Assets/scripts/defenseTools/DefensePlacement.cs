@@ -6,7 +6,8 @@ public class DefensePlacement : MonoBehaviour
 {
     [SerializeField] private Camera playerCam;
     [SerializeField] private Transform defensePlot;
-    [SerializeField] private Button PlaceButton;
+    [SerializeField] private Button PlaceCannon;
+    [SerializeField] private Button PlaceCrossbow;
     private GameObject currentDefense;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,6 +36,30 @@ public class DefensePlacement : MonoBehaviour
     {
         currentDefense = Instantiate(defense, defensePlot.position + Vector3.up * 1.5f, Quaternion.identity);
         currentDefense.layer = 2;
-        PlaceButton.gameObject.SetActive(false);
+        if (PlaceCannon != null)
+        {
+            PlaceCannon.gameObject.SetActive(false);
+        }
+        if (PlaceCrossbow != null)
+        {
+            PlaceCrossbow.gameObject.SetActive(false);
+        }
     }
+    public void LateUpdate()
+    {
+        if (playerCam == null || defensePlot == null)
+        {
+            return;
+        }
+        Vector3 btnsPosition = playerCam.WorldToScreenPoint(defensePlot.position);
+        if (PlaceCannon != null)
+        {
+            PlaceCannon.transform.position = btnsPosition;
+        }
+        if (PlaceCrossbow != null)
+        {
+            PlaceCrossbow.transform.position = btnsPosition;
+        }
+    }
+
 }
