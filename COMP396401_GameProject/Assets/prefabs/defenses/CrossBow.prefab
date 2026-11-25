@@ -103,8 +103,9 @@ GameObject:
   - component: {fileID: 4936531823830703657}
   - component: {fileID: 5170181454122647929}
   - component: {fileID: -3508630465875754393}
+  - component: {fileID: 3803773711570718}
   m_Layer: 0
-  m_Name: testCanon
+  m_Name: CrossBow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +160,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 22b747075448a8b43970408b857c1e22, type: 2}
+  - {fileID: 2100000, guid: 43507c0575c307242936b08a839afa9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -216,11 +217,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ceecc12443b9934ca751d1860eac4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefenseBehavoir
-  Damage: 5
+  Damage: 3
   RPM: 60
-  Range: 10
+  Range: 15
   DefRotation: {fileID: 8799716107957723095}
   target: {fileID: 0}
   EnemiesLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &3803773711570718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140872764144204504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007b676884458c9439877e24019dccb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefenseDamage

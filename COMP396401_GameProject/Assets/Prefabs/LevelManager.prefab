@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3064814434603673833}
   - component: {fileID: 7006701857777118401}
-  - component: {fileID: 186596372283159950}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -45,21 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1f6527bafa4d34883328787ac604fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
---- !u!114 &186596372283159950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86592298702689042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c33b32ba4b600449a530b3422a1492e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoinSystem
-  p1coinAmount: 0
-  p1startingCoins: 7
-  p1CoinCountTxt: {fileID: 0}
-  p2coinAmount: 0
-  p2startingCoins: 7
-  p2CoinCountTxt: {fileID: 0}
+  gameTime: 180
+  timerText: {fileID: 0}
+  castle: {fileID: 0}
+  castleMaxHealth: 150
+  castleHealth: 100
+  castleHealthBar: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  winnerText: {fileID: 0}

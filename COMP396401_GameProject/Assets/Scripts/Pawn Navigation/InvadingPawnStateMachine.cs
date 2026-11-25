@@ -1,5 +1,4 @@
-using NUnit.Framework.Internal;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
+
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,6 +9,7 @@ namespace Core.FSM
     {
         [SerializeField] private Transform castle;
         private StateMachine stateMachine;
+        public int DamageResit = 1;
         private void Awake()
         {
             castle = GameObject.FindWithTag("Castle").transform;

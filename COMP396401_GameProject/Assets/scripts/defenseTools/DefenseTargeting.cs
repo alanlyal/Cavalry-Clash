@@ -54,21 +54,21 @@ public class DefenseTargeting
         JobHandle dependency = new JobHandle();
         JobHandle SearchJobHandle = enemySearch.Schedule(EnemiestoCalc.Length, dependency);
         SearchJobHandle.Complete();
-        EnemyIndexToReturn = EnemiestoCalc[EnemyToIndex[0]].EnemyIndex;
+
+        if (EnemyToIndex[0] != -1)
+        {
+            EnemyIndexToReturn = EnemiestoCalc[EnemyToIndex[0]].EnemyIndex;
+            EnemiestoCalc.Dispose();
+            NodePosition.Dispose();
+            EnemyToIndex.Dispose();
+            NodeDistance.Dispose();
+            return GameLoopManager.CurrentEnemies[EnemyIndexToReturn];
+        }
         EnemiestoCalc.Dispose();
         NodePosition.Dispose();
         EnemyToIndex.Dispose();
         NodeDistance.Dispose();
-        if (EnemyIndexToReturn == -1)
-        {
-            return null;
-        }
-        if (EnemyIndexToReturn < 0)
-        {
-            return null;
-        }
-        return GameLoopManager.CurrentEnemies[EnemyIndexToReturn];
-        
+        return null;
     }
     struct EnemyData
     {

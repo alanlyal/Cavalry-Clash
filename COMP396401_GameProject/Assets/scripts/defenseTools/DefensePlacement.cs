@@ -8,11 +8,14 @@ public class DefensePlacement : MonoBehaviour
     [SerializeField] private Transform defensePlot;
     [SerializeField] private Button PlaceCannon;
     [SerializeField] private Button PlaceCrossbow;
+    [SerializeField] private CoinSystem coinsSystem;
+    [SerializeField] private int crossbowCost =2;
+    [SerializeField] private int cannonCost = 3;
     private GameObject currentDefense;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        coinsSystem = FindAnyObjectByType<CoinSystem>(); 
     }
 
     // Update is called once per frame
@@ -25,15 +28,31 @@ public class DefensePlacement : MonoBehaviour
             {
                 Vector3 position = mouseClick.point;
                 position.y = defensePlot.position.y + 1.5f;
+                currentDefense.transform.position = position;
             }
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
+           
                 currentDefense = null;
             }
         }
     }
     public void PlaceDefense(GameObject defense)
     {
+        if (defense == null)
+        {
+            return;
+        }
+        if (coinsSystem == null)
+        {
+            return;
+        }
+        int defCost = defense.name.Contains("Can") ? cannonCost : crossbowCost;
+        if (!coinsSystem.P1SpendCoins(defCost))
+        {
+            Debug.Log("not enoughs funds");
+            return;
+        }
         currentDefense = Instantiate(defense, defensePlot.position + Vector3.up * 1.5f, Quaternion.identity);
         currentDefense.layer = 2;
         if (PlaceCannon != null)

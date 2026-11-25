@@ -61,22 +61,23 @@ public class CoinSystem : MonoBehaviour
 
 
     //SPEND ==============================
-    public void P1SpendCoins(int amount)
+    public bool P1SpendCoins(int amount)
     {
         if (amount <= 0)
         {
-            return;
+            return false;
         }
 
-        if (p1coinAmount <= 0)
+        if (p1coinAmount < amount)
         {
-            return;
+            return false;
         }
 
         p1coinAmount -= amount;
 
         Debug.Log($"Player1 spent {amount} of coins. Total: {p1coinAmount}");
         UpdateCoinCount();
+        return true;
     }
 
 
@@ -87,7 +88,7 @@ public class CoinSystem : MonoBehaviour
             return;
         }
 
-        if (p2coinAmount <= 0)
+        if (p2coinAmount < amount)
         {
             return;
         }
@@ -103,11 +104,16 @@ public class CoinSystem : MonoBehaviour
 
     public void UpdateCoinCount()
     {
-        p1CoinCountTxt.text = "C: " + p1coinAmount;
         
-        
+        if (p1CoinCountTxt != null)
+        {
+            p1CoinCountTxt.text = "C: " + p1coinAmount;
+        }
 
-        p2CoinCountTxt.text = "C: " + p2coinAmount;
+        if (p2CoinCountTxt != null)
+        {
+            p2CoinCountTxt.text = "C: " + p2coinAmount;
+        }
     }
 
 
